@@ -1,0 +1,52 @@
+﻿@model List<C>
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+
+<div class="General">
+    <div class="Users">
+        Документы
+    </div>
+    <div class="divMenu">
+        <div class="imgButton" style="margin: 0 10px 0 10px; font-family: Arial; font-size: 12px;"><a href="/home/index">Одно поле</a></div>
+    </div>
+    <div class="divTable">
+        <table id="myTable">
+            <tr class="header">
+               
+
+                <th>
+                    Название документа
+                </th>
+                <th>
+                    Описание
+                </th>
+                <th>
+                    Год создания
+                </th>
+               
+
+            </tr>
+            @foreach (var item in Model)
+                {
+                    <tr position="Roman">
+                        
+                        <td>  
+                            <a href="@item.GetB.GetA.Link">@item.GetB.GetA.Name</a>
+                        </td>
+                        <td>
+                            @item.GetB.Description
+                        </td>
+                        <td>
+                            @item.Year
+                        </td>
+                        
+                    </tr>
+                }
+
+        </table>
+    </div>
+</div>
+
+
